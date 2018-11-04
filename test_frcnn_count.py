@@ -269,7 +269,7 @@ def main():
                 print(class_to_color[key])
                 fff_ss_ss = class_to_color[key]
 
-                cv2.rectangle(img_scaled, (x1, y1), (x2, y2), (fff_ss_ss[0],fff_ss_ss[1],fff_ss_ss[2]) , 2)
+                cv2.rectangle(img_scaled, (x1, y1), (x2, y2), (255,0,0) , 2)
 
                 textLabel = '{}: {}'.format(key, int(100 * new_probs[jk]))
                 all_dets.append((key, 100 * new_probs[jk]))
