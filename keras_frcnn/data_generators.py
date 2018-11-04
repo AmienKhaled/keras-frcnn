@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import random
 import copy
-import data_augment
+from .data_augment import *
 import roi_helpers
 import threading
 import itertools
