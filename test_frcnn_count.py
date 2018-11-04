@@ -271,7 +271,7 @@ def main():
                 x2 = int(x2)
                 y2 = int(y2)
 
-                cv2.rectangle(img_scaled, (x1, y1), (x2, y2), class_to_color[key], 2)
+                cv2.rectangle(img_scaled, (x1, y1), (x2, y2), int(class_to_color[key]), 2)
 
                 textLabel = '{}: {}'.format(key, int(100 * new_probs[jk]))
                 all_dets.append((key, 100 * new_probs[jk]))
