@@ -63,7 +63,7 @@ def convert_to_images():
             break
         if cv2.waitKey(1) == 27:
             break
-        cam.set(cv2.CAP_PROP_POS_MSEC,(count*slice_frame_rate)) 
+        cam.set(cv2.CAP_PROP_POS_MSEC,(counter*slice_frame_rate)) 
         # press esc to quit
     cv2.destroyAllWindows()
 
