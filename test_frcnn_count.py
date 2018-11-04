@@ -119,7 +119,7 @@ def main():
     sys.setrecursionlimit(40000)
     config_output_filename = './keras-frcnn/keras_frcnn/config.pickle'
 
-    with open(config_output_filename, 'r') as f_in:
+    with open(config_output_filename, 'rb') as f_in:
         C = pickle.load(f_in)
 
     # turn off any data augmentation at test time
