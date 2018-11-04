@@ -3,7 +3,7 @@ import cv2
 import random
 import copy
 from .data_augment import *
-import roi_helpers
+from . roi_helpers import *
 import threading
 import itertools
 
