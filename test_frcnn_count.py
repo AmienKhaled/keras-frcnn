@@ -25,7 +25,7 @@ parser.add_option("-d", "--input_dir", dest="input_dir", help="Path to input wor
 parser.add_option("-u", "--output_dir", dest="output_dir", help="Path to output working directory.",
                   default="/home/ubuntu/output")
 parser.add_option("-r", "--frame_rate", dest="frame_rate", help="Frame rate of the output video.", default=25.0)
-parser.add_option("-rr", "--slice_frame_rate", dest="frame_rate", help="Frame rate of the output video.", default=1.0)
+parser.add_option("-g", "--slice_frame_rate", dest="frame_rate", help="Frame rate of the output video.", default=1.0)
 
 (options, args) = parser.parse_args()
 if not options.input_file:  # if filename is not given
