@@ -25,6 +25,7 @@ parser.add_option("-d", "--input_dir", dest="input_dir", help="Path to input wor
 parser.add_option("-u", "--output_dir", dest="output_dir", help="Path to output working directory.",
                   default="/home/ubuntu/output")
 parser.add_option("-r", "--frame_rate", dest="frame_rate", help="Frame rate of the output video.", default=25.0)
+parser.add_option("-rr", "--slice_frame_rate", dest="frame_rate", help="Frame rate of the output video.", default=1.0)
 
 (options, args) = parser.parse_args()
 if not options.input_file:  # if filename is not given
@@ -36,7 +37,7 @@ img_path = os.path.join(options.input_dir, '')
 output_path = os.path.join(options.output_dir, '')
 num_rois = 32
 frame_rate = float(options.frame_rate)
-
+slice_frame_rate = int(options.slice_frame_rate)
 
 def cleanup():
     print("cleaning up...")
@@ -62,6 +63,7 @@ def convert_to_images():
             break
         if cv2.waitKey(1) == 27:
             break
+        cam.set(cv2.CAP_PROP_POS_MSEC,(count*slice_frame_rate)) 
         # press esc to quit
     cv2.destroyAllWindows()
 
