@@ -266,10 +266,10 @@ def main():
             for jk in range(new_boxes.shape[0]):
                 (x1, y1, x2, y2) = new_boxes[jk, :]
                 
-                print(type(x1))
-                print(type(y1))
-                print(type(x2))
-                print(type(y2))
+                x1 = int(x1)
+                y1 = int(y1)
+                x2 = int(x2)
+                y2 = int(y2)
 
                 cv2.rectangle(img_scaled, (x1, y1), (x2, y2), class_to_color[key], 2)
 
