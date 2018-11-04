@@ -117,7 +117,7 @@ def accumulate(l):
 def main():
     cleanup()
     sys.setrecursionlimit(40000)
-    config_output_filename = '.keras-frcnn/keras_frcnn/config.pickle'
+    config_output_filename = './keras-frcnn/keras_frcnn/config.pickle'
 
     with open(config_output_filename, 'r') as f_in:
         C = pickle.load(f_in)
