@@ -135,6 +135,8 @@ def conv_block_td(input_tensor, kernel_size, filters, stage, block, input_shape,
     return x
 
 def nn_base(input_tensor=None, trainable=False):
+    
+    K.set_image_data_format('channels_last')
 
     # Determine proper input shape
     if K.image_dim_ordering() == 'th':
